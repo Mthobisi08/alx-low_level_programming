@@ -5,13 +5,13 @@
 
 /**
  * main - prints if number is positive, zero or nagative
+ *
  * Return: Always (Success)
  *
  */
 
 int main(void)
 {
-
 	int n;
 
 	srand(time(0));
