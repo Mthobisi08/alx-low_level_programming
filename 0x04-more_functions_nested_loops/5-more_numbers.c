@@ -1,22 +1,20 @@
 #include "main.h"
 /**
- * print_diagonal - printing lines diagonal
- * @n: input variable
+ * more_numbers - nmbr fct
  *
- * Return: void
+ * Return: no return
  */
-void print_diagonal(int n)
+void more_numbers(void)
 {
-        int i, j;
-        if (n <= 0)
-                putchar('\n');
-        for (i = 0; i < n; i++)
-        {
-                for (j = 0; j < i; j++)
-                {
-                        putchar(' ');
-                }
-                putchar('\\');
-                putchar('\n');
-        }
+int i, j;
+for (i = 1; i <= 10; i++)
+{
+for (j = 0; j < 15; j++)
+{
+if (j >= 10)
+putchar('1');
+putchar(j % 10 + '0');
+}
+putchar('\n');
+}
 }
