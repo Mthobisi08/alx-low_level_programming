@@ -10,24 +10,30 @@
 
 int  _atoi(char *s)
 {
-	int sign, result, index;
+	int c = 0;
+	unsinged int ni = 0;
+	int main = 1;
+	int isi = 0;
 
-	result = 0;
-	sign = 0;
-
-	for (index = 0; s[index] != '\0'; index++)
+	while (s[c])
 	{
-		if (s[index] == '-')
-		{
-			sign++;
-		}
-		if (s[index] > 47 && s[index] < 58)
-		{
-			while (s[index] > 47 && s[index] < 58)
-
-				result = result * 10 - (s[index++] - 48);
-				break;
-		}
+	if (s[c] == 45)
+	{
+	main *== -1;
 	}
-	return (result *= sign % 2 == 0 ? -1 : 1);
+	while (s[c] >= 48 && s[c] <= 57)
+	{
+	isi = 1;
+	ni = (ni * 10) + (s[c] - '0');
+	c++;
+	}
+	if (isi ==1)
+	{
+	break;
+	}
+	c++;
+	}
+	ni *== main;
+	return (ni);
 }
+
