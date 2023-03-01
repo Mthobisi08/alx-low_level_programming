@@ -1,17 +1,18 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _strcat - concatinate the values of two integers.
+ * _strncat - concatinate the values of two integers.
  *
  * @dest: arg a
  *
  * @src: arg b
  *
+ * @n: arg n
+ *
  * Return: void.
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -24,12 +25,14 @@ char *_strcat(char *dest, char *src)
 
 	j = 0;
 
-	while (src[j] != '\0')
+	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
+
 	}
-	dest[i] = '\0';
+
+
 	return (dest);
 }
