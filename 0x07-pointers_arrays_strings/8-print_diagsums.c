@@ -1,30 +1,28 @@
-#include "main.h"
 #include <stdio.h>
-#include <string.h>
+#include "main.h"
 
 /**
-* print_chessboard - Write a function that prints the chessboard.
-*
-*@a: to check
-*@size: to check
-*
-* Return: void
-*/
+ * print_diagsums -  function that prints the sum of the two diagonals
+ * @a: 2d array of int types.
+ * @size: size of array.
+ */
 void print_diagsums(int *a, int size)
 {
-int r = 0;
-int i;
-int j;
-for(i=0; i<size; i++)
-{
-for(j=0; j<size; j++)
-{
-if (i==j)
-{
-int rij=a[i][j];
-r= r + rij;
-printf ("%d ",r);
-}
-}
-}
+	int index, sum1 = 0, sum2 = 0;
+
+	for (index = 0; index < size; index++)
+	{
+		sum1 += a[index];
+		a += size;
+	}
+
+	a -= size;
+
+	for (index = 0; index < size; index++)
+	{
+		sum2 += a[index];
+		a -= size;
+	}
+
+	printf("%d, %d\n", sum1, sum2);
 }
