@@ -1,20 +1,17 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _strlen - a function that returns the length of a string
- * @s: char input
- * Return: length of the input string
- */
-int _strlen(char *s)
-{
-	int i = 1, sum = 0;
-	char pl = s[0];
+ * _strlen_recursion - Calculate the length of a string
+ * @s: the string count
+ * Return: integer value
+*/
 
-	while (pl != '\0')
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
 	{
-		sum++;
-		pl = s[i++];
+		return (0);
 	}
-	return (sum);
+	s++;
+	return (_strlen_recursion(s) + 1);
 }
