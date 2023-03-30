@@ -13,9 +13,9 @@
  */
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+char *str;
+unsigned int len;
+struct list_s *next;
 } list_t;
 
 /**
@@ -26,19 +26,19 @@ typedef struct list_s
  */
 size_t print_list(const list_t *h)
 {
-    size_t count = 0;
+size_t count = 0;
 
-    while (h != NULL)
-    {
-        if (h->str != NULL)
-            printf("[%d] %s\n", h->len, h->str);
-        else
-            printf("[0] (nil)\n");
-        count++;
-        h = h->next;
-    }
+while (h != NULL)
+{
+if (h->str != NULL)
+printf("[%d] %s\n", h->len, h->str);
+else
+printf("[0] (nil)\n");
+count++;
+h = h->next;
+}
 
-    return (count);
+return (count);
 }
 
 
